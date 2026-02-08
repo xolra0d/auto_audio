@@ -74,7 +74,7 @@ opentelemetry-proto==1.39.1
 opentelemetry-sdk==1.39.1
 opentelemetry-semantic-conventions==0.60b1
 optuna==4.7.0
-packaging @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_packaging_1769093650/work
+packaging
 pandas==3.0.0
 pillow==12.1.0
 primePy==1.3
