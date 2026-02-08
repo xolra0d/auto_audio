@@ -1,0 +1,35 @@
+{
+  "id2name": [
+    "angry",
+    "sad",
+    "neutral",
+    "positive"
+  ],
+  "preprocessor": {
+    "_target_": "modeling_gigaam.FeatureExtractor",
+    "sample_rate": 16000,
+    "features": 64
+  },
+  "encoder": {
+    "_target_": "modeling_gigaam.ConformerEncoder",
+    "feat_in": 64,
+    "n_layers": 16,
+    "d_model": 768,
+    "subsampling_factor": 4,
+    "ff_expansion_factor": 4,
+    "self_attention_model": "rel_pos",
+    "pos_emb_max_len": 5000,
+    "n_heads": 16,
+    "conv_kernel_size": 31,
+    "flash_attn": false
+  },
+  "head": {
+    "_target_": "torch.nn.Linear",
+    "in_features": 768,
+    "out_features": 4
+  },
+  "model_name": "emo",
+  "hashes": {
+    "model": "e7ab8a0ce0c41721e9c731d5abf9c01e"
+  }
+}
